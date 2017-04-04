@@ -30,9 +30,11 @@ module.exports = {
             test: /\.css$/,
             include: [
                 path.resolve(__dirname, 'src'),
-                path.resolve(__dirname, 'node_modules/antd/lib')
             ],
             loader: 'style-loader!css-loader'
+        }, {
+            test: /\.less$/,
+            loader: 'style-loader!css-loader!less-loader'
         }],
     },
     resolve: {
