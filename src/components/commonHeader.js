@@ -24,8 +24,8 @@ class CommonHeader extends Component {
             currentKey = '.$' + current;
 
         return (
-            <Layout className="layout">
-                <Header>
+            <Header>
+                <div styleName="container">
                     <div styleName="logo">
                         阿D点菜
                     </div>
@@ -47,8 +47,8 @@ class CommonHeader extends Component {
                             </Link>
                         </Menu.Item>
                     </Menu>
-                </Header>
-            </Layout>
+                </div>
+            </Header>
         )
     }
 }

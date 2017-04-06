@@ -3,33 +3,27 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from './reducers';
+import reducers from './reducers';
 import Order from './components/order';
 import Other from './components/other';
 import { Route } from 'react-router';
-import { ConnectedRouter, routerMiddleware, routerReducer } from 'react-router-redux';
-import createHistory from 'history/createBrowserHistory';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 
-const history = createHistory();
-const middleware = routerMiddleware(history);
 const store = createStore(
-    combineReducers({
-        router: routerReducer
-    }),
-    applyMiddleware(middleware)
+    reducers
 );
 
 ReactDOM.render(
     <Provider store={store}>
-        <ConnectedRouter history={history}>
+        <BrowserRouter>
             <div>
                 <Route exact path="/" component={Order}/>
                 <Route path="/seat" component={Other}/>
             </div>
-        </ConnectedRouter>
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root')
 );

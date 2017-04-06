@@ -22,7 +22,7 @@ class Other extends Component {
         console.log(this.props);
         return (
             <div>
-                <CommonHeader current="seat"></CommonHeader>
+                <CommonHeader current="seat"/>
                 <Button.Group>
                     <Button type="primary">
                         <Link to={`${match.url}/第1个/Allen`}>
