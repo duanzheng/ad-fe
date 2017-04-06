@@ -36,12 +36,12 @@ class CommonHeader extends Component {
                         mode="horizontal"
                         styleName="list"
                     >
-                        <Menu.Item key="order">
+                        <Menu.Item key="order" styleName="item">
                             <Link to="/">
                                 订单
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="seat">
+                        <Menu.Item key="seat" styleName="item">
                             <Link to="/seat">
                                 座位
                             </Link>

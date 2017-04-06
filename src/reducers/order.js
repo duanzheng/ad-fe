@@ -13,6 +13,11 @@ let defaultState = {
             table: '5号桌',
             food: ['回锅肉', '麻辣小龙虾', '米饭', '炒苕尖'],
             status: 'processed'
+        },
+        {
+            table: '4号桌',
+            food: ['回锅肉', '麻辣小龙虾', '米饭', '炒苕尖'],
+            status: 'processed'
         }
     ]
 }
