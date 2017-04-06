@@ -12,20 +12,17 @@ const { Header } = Layout;
 class CommonHeader extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            current: 'todos'
-        }
     }
 
-    handleClick = e => {
-        this.setState({
-            current: e.key
-        })
-    };
+    handleClick(e) {
+        console.log(e);
+    }
 
     render() {
-        const SubMenu = Menu.SubMenu;
+        const
+            { current } = this.props,
+            currentKey = '.$' + current;
+
         return (
             <Layout className="layout">
                 <Header>
@@ -33,19 +30,19 @@ class CommonHeader extends Component {
                         阿D点菜
                     </div>
                     <Menu
-                        theme="dark"
                         onClick={this.handleClick}
-                        selectedKeys={[this.state.current]}
+                        theme="dark"
+                        selectedKeys={[currentKey]}
                         mode="horizontal"
                         styleName="list"
                     >
-                        <Menu.Item key="todos">
+                        <Menu.Item key="order">
                             <Link to="/">
                                 订单
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="other">
-                            <Link to="/other">
+                        <Menu.Item key="seat">
+                            <Link to="/seat">
                                 座位
                             </Link>
                         </Menu.Item>
