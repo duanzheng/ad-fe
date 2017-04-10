@@ -25,7 +25,7 @@ class Order extends Component {
 
     handleTypeChange(e) {
         this.setState({ selectType: e.target.value });
-        console.log(e);
+
     }
 
     render() {
