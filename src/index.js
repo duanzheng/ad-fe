@@ -8,8 +8,10 @@ import { Provider } from 'react-redux';
 import reducers from './reducers';
 import Order from './components/order';
 import Other from './components/other';
+import SeatList from './containers/seatList';
 import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
+import CommonHeader from './components/commonHeader';
 import './index.css';
 
 const store = createStore(
@@ -20,8 +22,9 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <div>
+                <CommonHeader/>
                 <Route exact path="/" component={Order}/>
-                <Route path="/seat" component={Other}/>
+                <Route path="/seat" component={SeatList}/>
             </div>
         </BrowserRouter>
     </Provider>,

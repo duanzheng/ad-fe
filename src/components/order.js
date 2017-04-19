@@ -54,7 +54,6 @@ class Order extends Component {
         return (
             <div>
                 <Layout>
-                    <CommonHeader current="order"/>
                     <Content styleName="content">
                         <div>
                             <Radio.Group value={this.state.selectType} onChange={this.handleTypeChange}>

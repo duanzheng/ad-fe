@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { Route, Link } from 'react-router-dom';
-import CommonHeader from './commonHeader';
 
 const Text = ({ match }) => (
     <div>
@@ -22,7 +21,6 @@ class Other extends Component {
         console.log(this.props);
         return (
             <div>
-                <CommonHeader current="seat"/>
                 <Button.Group>
                     <Button type="primary">
                         <Link to={`${match.url}/第1个/Allen`}>
